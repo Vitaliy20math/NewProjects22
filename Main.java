@@ -175,7 +175,12 @@ public class Main {
                                 System.out.println("В Римской системе нет отрицательных чисел");
                             }
                         }else if(first_num == second_num){
-                            result+=0;
+                            try{
+                                throw new Exception();
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                                System.out.println("В Римской системе существуют только положительные числа, но по факту результат операции = 0");
+                            }
                         }else{
                             result+=rimNumOneTen.get(first_num - second_num);
                         }

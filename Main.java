@@ -103,6 +103,7 @@ public class Main {
                     HashMap<Integer, String> rimNum = new HashMap<>();
                     HashMap<Integer, String> rimNumOneTen = new HashMap<>();
 
+                    rimNum.put(0, "");
                     rimNum.put(10, "X");
                     rimNum.put(20, "XX");
                     rimNum.put(30, "XXX");
@@ -185,7 +186,7 @@ public class Main {
                         prod = first_num * second_num;
 
                         int hundreds = prod/100;
-                        int decimal = (prod - hundreds)/10;
+                        int decimal = (prod - hundreds*100)/10;
                         int units = prod - (hundreds * 100 + decimal * 10);
                         if(hundreds==1){
 
